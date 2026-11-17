@@ -104,7 +104,7 @@ El script de arranque (user data) está en [`scripts/user-data1.sh`](scripts/use
 
 ```bash
 dig web.libreria.lab +short
-for i in $(seq 1 30); do curl -s http://web.libreria.lab | grep -iE "servidor 2|ip-10-0-1-36"; done
+for i in $(seq 1 30); do curl -s http://web.libreria.lab | grep -iE "servidor 2|ip-10-0-1-36"; done | sort | uniq -c
 ```
 
 - Peticiones CURL:
